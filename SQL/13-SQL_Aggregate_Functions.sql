@@ -40,3 +40,33 @@ Here we use the MIN() function and the GROUP BY clause, to return the smallest p
 select min(unit_price) as smallestprice, category_id
 from products
 GROUP BY category_id
+
+--- MAX()
+/* The SQL MAX() Function
+The MAX() function returns the largest value of the selected column.
+The MAX() function works with numeric, string, and date data types
+Return the highest price in the price column, in the "products" table   */
+SELECT max(unit_price)
+from products; --- 263.5 
+
+/* SELECT MAX(column_name)
+FROM table_name
+WHERE condition;    */
+
+--- set column Name (Alias)
+/* When you use MAX() , the returned column will not have a name. 
+Use the AS keyword , to give the column a descriptive name */
+select max(unit_price) AS highestprice
+from products;
+
+/* Use MAX() with Date column 
+The following SQK returns the Birthdate in the Birthdate column, in the Employees Table:    */
+select max(BirthDate) AS lastestbirthdate
+from employees; --- 1969-07-02 
+
+/* Use MAX() with GROUP BY 
+here we use the MAX() function and the GROUP BY clause , to return the highest price for each category in the products table:   */
+select max(unit_price) AS highestprice, category_id
+FROM products
+GROUP BY category_id;
+
