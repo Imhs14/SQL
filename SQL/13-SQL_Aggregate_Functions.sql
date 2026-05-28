@@ -30,3 +30,13 @@ Use the AS keyword to give the column a descriptive name:*/
 SELECT min(unit_price) AS smallestPrice 
 FROM products;
 
+--- USe MIN() with Date Column 
+--- The following SQL returns the earliest Birthdate column , in the Employees Table:
+SELECT min(BirthDate) AS EarliestBirthdate
+FROM employees;
+
+/* Use MIN() with GROUP BY
+Here we use the MIN() function and the GROUP BY clause, to return the smallest price for each category in the Products table:   */
+select min(unit_price) as smallestprice, category_id
+from products
+GROUP BY category_id
