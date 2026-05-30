@@ -21,13 +21,12 @@ _	    Represents a single character
 /* Using the [] Wildcard
 The [] wildcard returns a result if any of the characters inside gets a match.
 Return all customers starting with either "b", "s", or "p":     */
-SELECT * FROM customers ;
-WHERE CustomerName REGEXP '[bsp]$';
+SELECT * FROM customers
+WHERE CustomerName REGEXP '^[bsp]';
  
 --- # using [^....] negation i.e the str inside the [] should not be included, if sql sees it, it won't consider it 
- /*SELECT * FROM customers
-WHERE "CustomerName" REGEXP '[^bsp]%';
+SELECT * FROM customers
+WHERE "CustomerName" REGEXP '^[^bsp]';
 
 --- #--------------------using [-], here if we give '[a-e]%' then sql will search in the customer name if it starts with any of these a,b,c,d,e characters, i.e a-e is the range of str from a to e.
---- SELECT * FROM customers
---- WHERE CustomerName LIKE '[A-Z]%'; */
+SELECT * FROM customers WHERE `ContactName` REGEXP '^[a-e]'; --- in mysql we use REGEXP instead of LIKE for these type of cases.
