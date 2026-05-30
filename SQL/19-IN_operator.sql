@@ -5,3 +5,31 @@ The following SQL uses the IN operator to select all customers from Germany, Fra
 SELECT * FROM customers
 WHERE "Country" IN ('Germany', 'France', 'UK');
 
+--- The following SQL uses multiple OR conditions to select all customers from Germany, France, or UK (same result, but longer code):
+SELECT * FROM customers  WHERE "Country" = 'Germany' OR "Country" = 'France' OR "Country" = 'UK';
+
+/* Syntax
+    SELECT column_name(s)
+    FROM table_name
+    WHERE column_name IN (value1, value2, ...);
+*/
+--- #-------------The NOT IN Opearator--------------------
+SELECT * FROM customers
+WHERE "Country" NOT IN ('Germany', 'France', 'UK');
+
+--- #------------The IN(SELECT)-----------------------
+/* You can also use IN with a subquery in the WHERE clause.
+With a subquery you can return all records from the main query that are present in the result of the subquery.
+The following SQL returns all customers who also have an order in the "Orders" table:   */
+SELECT * FROM customers
+WHERE "CustomerID" IN (SELECT "CustomerID" FROM orders);
+
+/* NOT IN (SELECT)
+The result in the example above returned 74 records, that means that there are 17 customers that haven't placed any orders.
+Let us check if that is correct, by using the NOT IN operator.
+The following SQL returns all customers who do NOT have any orders in the "Orders" table:*/
+
+SELECT * FROM customers
+WHERE "CustomerID" NOT IN (SELECT "CustomerID" FROM orders); 
+
+# IN used to specify the range of values in a where clause 
