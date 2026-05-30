@@ -44,11 +44,11 @@ In the following example, c is the alias for customers and o is for orders, maki
 
 SELECT c.CustomerName , o.OrderID
 FROM customers AS c 
-JOIN orders AS o ON c."CustomerID" = o."CustomerID";
+JOIN orders AS o ON c.CustomerID = o.CustomerID;
 
 /* Aliases are useful when:
 
 There are more than one table involved in a query
 Functions are used in the query
 Column names are long or not very readable
-Two or more columns are combined together*/
+Two or more columns are combined together   */
