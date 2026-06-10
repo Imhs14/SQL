@@ -17,3 +17,7 @@ RIGHT JOIN: Everything on the right + matching left details.
 
 FULL JOIN: Absolutely everything from both sides.  */
 
+---  Syntax for join 
+/* SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;*/
