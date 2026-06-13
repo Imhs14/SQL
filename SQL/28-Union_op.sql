@@ -27,7 +27,7 @@ ORDER BY "Country";
 Here we add a WHERE clause to only return the unique German cities from both the "customers" and the "suppliers" table: */
 SELECT City, Country FROM customers
 WHERE "Country" = "Germany"
-UNION ALL 
+UNION ALL  --- UNION ALL will not remove the duplicates,  where as UNION will remove the duplicates
 SELECT City, Country FROM "Suppliers"
 WHERE "Country" = "Germany"
 ORDER BY "City";
