@@ -34,7 +34,11 @@ ORDER BY "City";
 
 --- Another UNION Examples 
 --- The following SQL lists all customers a suppliers:
-SELECT 'Customer' AS Type, ContactName, City, Country
+SELECT "Customer" AS Type, ContactName, City, Country
 FROM customers
-SELECT 'Suppliers', "ContactName", "City", "Country"
+UNION
+SELECT "Supplier", "ContactName", "City", "Country" ---  here no need to write AS Type bcs it will take the column name from the above so if we specify it again down here it will through an error 
 FROM "Suppliers";
+
+/*
+Notice the "AS Type" above - it is an alias. Aliases are used to give a column a temporary name. So, here we have created a temporary column named "Type", that list whether the contact person is a "Customer" or a "Supplier".*/
