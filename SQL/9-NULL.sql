@@ -13,7 +13,7 @@ SYNTAX : IS NOT NULL
 SELECT column_name
 FROM table_name
 WHERE column_name IS NOT NULL;
-*/
+
 
 --- The IS NULL operator is used to test for empty values (NULL values).
 select customername, contactname ,address
@@ -26,3 +26,8 @@ where address IS NULL ; --- Gives output when Null values are present
 select customername, contactname,address 
 from customersw3
 where address IS NOT NULL; --- return values that do not contain null values 
+*/
+-- Practice/revision
+SELECT FirstName
+FROM Employees
+WHERE LastName IS NULL;

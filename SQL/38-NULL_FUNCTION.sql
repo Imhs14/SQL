@@ -10,3 +10,4 @@ NOTE : A NULL value represents an unknown or missing data in a database field. i
 
 The N
 */
+Drop table Employees;
