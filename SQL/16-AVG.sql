@@ -32,3 +32,15 @@ SELECT avg(unit_price) AS [Average Price], category_id
 FROM products
 GROUP BY category_id;
 
+SELECT AVG(Price)
+FROM Products;
+
+-- Adding a where clause 
+SELECT AVG(Price) AS AVGofcatid1
+FROM Products
+WHERE CategoryID = 1;
+
+--- Higher than Average 
+-- To list all records with a higher price than average, we can use the AVG() function in a sub query
+SELECT * FROM Products
+WHERE Price > (SELECT AVG(Price) FROM Products);
