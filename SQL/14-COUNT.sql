@@ -49,3 +49,8 @@ Here we use the COUNT() function and the GROUP BY clause, to return the number o
 SELECT count(*) AS [Number OF records], category_id
 FROM products
 GROUP BY category_id; 
+
+
+SELECT MAX(BirthDate) AS LargestDate
+FROM Employees;
+

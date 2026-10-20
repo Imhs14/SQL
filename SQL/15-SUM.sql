@@ -38,3 +38,11 @@ from order_details; ---- earings = 128140
 SELECT sum(unit_price * quantity)
 from order_details
 LEFT JOIN products ON order_details.product_id = products.product_id; --- 387763.63
+
+SELECT SUM(Quantity)
+FROM OrderDetails;
+
+-- adding a Where Clause
+SELECT SUM(Quantity) AS sumofquantity_for_prdid11
+FROM OrderDetails
+Where ProductID = 11;
