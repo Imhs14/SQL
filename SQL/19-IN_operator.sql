@@ -37,4 +37,5 @@ WHERE "CustomerID" NOT IN (SELECT "CustomerID" FROM orders);
 SELECT * FROM Customers
 WHERE Country IN ('Germany','France','USA');
 
-
+SELECT * FROM Customers
+WHERE CustomerID IN (SELECT CustomerID FROM OrderDetails);
