@@ -44,3 +44,6 @@ WHERE CategoryID = 1;
 -- To list all records with a higher price than average, we can use the AVG() function in a sub query
 SELECT * FROM Products
 WHERE Price > (SELECT AVG(Price) FROM Products);
+
+SELECT AVG(Price)
+FROM Products;

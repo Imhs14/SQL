@@ -33,3 +33,8 @@ SELECT * FROM customers
 WHERE "CustomerID" NOT IN (SELECT "CustomerID" FROM orders); 
 
 # IN used to specify the range of values in a where clause 
+
+SELECT * FROM Customers
+WHERE Country IN ('Germany','France','USA');
+
+
