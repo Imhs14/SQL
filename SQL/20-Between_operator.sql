@@ -41,3 +41,17 @@ The BETWEEN operator is useful for filtering records within a specific date or t
 The following SQL selects all orders placed in July, 1996:  */
 SELECT * FROM orders
 WHERE "OrderDate" BETWEEN '1996-07-01' AND '1996-07-31';
+
+SELECT Price FROM Products
+WHERE Price BETWEEN 1 AND 60;
+
+SELECT Price FROM Products
+WHERE Price NOT BETWEEN 1 AND 60;
+
+SELECT * FROM Products
+WHERE Price BETWEEN 10 AND 20
+AND CategoryID IN (1,2,3);
+
+SELECT * FROM Products
+WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
+ORDER BY ProductName;
