@@ -39,4 +39,18 @@ The following SQL selects all orders with customer and shipper information: */
 SELECT orders."OrderID", customers."CustomerID", "Shippers"."ShipperName"
 FROM orders
 INNER JOIN customers ON orders."CustomerID" = customers."CustomerID"
-INNER JOIN "Shippers" ON orders."ShipperID" = "Shippers"."ShipperID"; 
+INNER JOIN "Shippers" ON orders."ShipperID" = "Shippers"."ShipperID";
+
+
+
+--- Practice Revision
+SELECT Products.ProductID, Products.ProductName, Categories.CategoryName
+FROM Products
+INNER JOIN Categories
+ON Products.CategoryID = Categories.CategoryID; 
+
+--- Join Multiple Tables
+SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID;
