@@ -1,5 +1,5 @@
 /* SQL LEFT JOIN 
-The LEFT JOIN returns all rows from the left table(table1), and ont he matched rows from the right table(table2)
+The LEFT JOIN returns all rows from the left table(table1), and on the matched rows from the right table(table2)
 
 If there is no match in teh right table, the result for the column from the right tabe will be NULL. 
 
@@ -21,3 +21,13 @@ SELECT customers.CustomerName, orders."OrderID"
 FROM customers
 LEFT JOIN orders ON customers."CustomerID" = orders."CustomerID"
 WHERE orders."CustomerID" IS NULL;
+
+SELECT Orders.CustomerID, Customers.CustomerName
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+SELECT Orders.CustomerID,Customers.CustomerName
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+WHERE Customers.CustomerID IS NULL;
