@@ -17,3 +17,10 @@ The following SQL statement select all customers, and all orders:   */
 SELECT customers.customerName, orders."OrderID"
 FROM customers 
 FULL JOIN orders ON "Customers"."CustomerID" = orders."OrderID"; 
+
+
+--- Mysql has CROSS JOIN instead of the full join.
+SELECT Customers.CustomerID, Orders.OrderID, Customers.CustomerName
+FROM Orders
+CROSS JOIN Customers
+WHERE Customers.CustomerID = Orders.CustomerID;
