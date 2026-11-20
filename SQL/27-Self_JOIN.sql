@@ -88,3 +88,11 @@ FROM Orders A, Orders B
 WHERE A.ShipperID = B.ShipperID
   AND (A.OrderDate < B.OrderDate 
         OR (A.OrderDate = B.OrderDate AND A.OrderID < B.OrderID));
+
+
+CREATE TABLE Woah (
+  nameofprod VARCHAR(22) NOT NULL,
+  price VARCHAR(22) NOT NULL,
+);
+
+SELECT * FROM Categories;
